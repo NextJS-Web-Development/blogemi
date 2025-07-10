@@ -4,4 +4,5 @@ export interface BlogProps {
   author: string;
   date: string;
   content: string;
+  tags: string[];
 }
