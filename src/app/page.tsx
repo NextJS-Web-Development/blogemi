@@ -1,7 +1,25 @@
-import { getLatestBlogs } from '@/library/utils';
+'use client';
+
+import { BlogProps } from '@/library/types';
+import { fetchBlogs, getLatestBlogs } from '@/system/data/json-handler';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const latestBlogs = getLatestBlogs(7, 10);
+  const [latestBlogs, setLatestBlogs] = useState<BlogProps[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const blogs = await fetchBlogs();
+      const latestBlogs = getLatestBlogs({
+        daysAgo: 14,
+        limit: 10,
+        blogs,
+      });
+      setLatestBlogs(latestBlogs);
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div>
