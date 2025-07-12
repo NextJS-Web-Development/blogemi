@@ -31,7 +31,7 @@ export default function Home() {
         <ul>
           {latestBlogs.map((blog) => (
             <li key={blog.id}>
-              <h4>{blog.titel}</h4>
+              <h4>{blog.title}</h4>
               <p>
                 {blog.author} - {new Date(blog.date).toLocaleDateString()}
               </p>
