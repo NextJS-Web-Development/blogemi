@@ -35,3 +35,18 @@ export function getLatestBlogs({
 
   return recentBlogs;
 }
+
+export async function addBlog(newBlog: BlogProps): Promise<void> {
+  const res = await fetch('http://localhost:3000/api/blogs', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(newBlog),
+  });
+
+  if (!res.ok) {
+    throw new Error('Failed to add blog');
+  }
+  
+}

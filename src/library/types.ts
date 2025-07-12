@@ -6,3 +6,10 @@ export interface BlogProps {
   content: string;
   tags: string[];
 }
+
+export interface AddBlogValues { 
+  title: string;
+  author: string;
+  content: string;
+  tags: string[];
+}
