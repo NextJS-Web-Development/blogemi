@@ -15,6 +15,10 @@ export async function fetchBlogs() {
   return blogs
 }
 
+export async function getAllBlogs(): Promise<BlogProps[]> {
+ return await fetchBlogs();
+}
+
 export function getLatestBlogs({
   daysAgo,
   limit,

@@ -38,7 +38,7 @@ export default function Home() {
             </a>
           </li>
           <li>
-            <a href="/blogs" aria-label="Browse Blog Posts">
+            <a href="/browse-blogs" aria-label="Browse Blog Posts">
               Browse Blogs
             </a>
           </li>
