@@ -9,6 +9,12 @@ export default function ThemeToggle(): JSX.Element {
   const toggleThemeSpanRef = useRef<HTMLDivElement>(null);
 
   const handleThemeToggle = () => {
+    const cookieConsent = localStorage.getItem(LOCAL_STORAGE.COOKIE_CONSENT.KEY);
+    if (cookieConsent == LOCAL_STORAGE.COOKIE_CONSENT.VALUES.REJECTED) {
+      alert('Cookie consent is rejected, theme toggle is disabled');
+      return;
+    }
+
     toggleTheme({
       isThemeDark,
       setIsThemeDark,
