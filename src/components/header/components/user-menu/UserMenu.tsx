@@ -1,8 +1,9 @@
 'use client';
 
-import { JSX } from 'react';
-import ThemeToggle from '@/components/header/components/user-menu/components/ThemeToggle';
 import styles from './user-menu.module.css';
+import ThemeToggle from '@/components/header/components/user-menu/components/ThemeToggle';
+
+import { JSX } from 'react';
 
 export default function UserMenu(): JSX.Element {
   return (

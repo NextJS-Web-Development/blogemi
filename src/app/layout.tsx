@@ -1,9 +1,10 @@
 import './globals.css';
 
+import CookieBanner from '@/components/cookie-banner/CookieBanner';
+
 import type { Metadata } from 'next';
 import { Geist } from 'next/font/google';
 import { Header } from '@/components';
-import CookieBanner from '@/components/cookie-banner/CookieBanner';
 
 const font = Geist({
   subsets: ['latin'],

@@ -1,5 +1,6 @@
-import { JSX, useEffect, useRef, useState } from 'react';
 import styles from '@/components/header/components/user-menu/user-menu.module.css';
+
+import { JSX, useEffect, useRef, useState } from 'react';
 import { toggleTheme, turnOnDarkTheme, turnOnLightTheme } from '@/components/header/utils';
 import { LOCAL_STORAGE } from '@/lib/localStorage';
 

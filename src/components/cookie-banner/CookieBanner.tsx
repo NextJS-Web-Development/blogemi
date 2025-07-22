@@ -1,6 +1,6 @@
 'use client';
-import styles from '@/components/cookie-banner/cookie-banner.module.css';
 
+import styles from '@/components/cookie-banner/cookie-banner.module.css';
 import Image from 'next/image';
 import CookieCrumb from '@/components/cookie-banner/components/CookieCrumb';
 import ButtonContainer from '@/components/cookie-banner/components/ButtonContainer';
