@@ -7,7 +7,7 @@ export default function Navigation(): JSX.Element {
   return (
     <nav aria-label="Main navigation" className={styles.navigation}>
       <Link href="/">
-        <Image src="/blogemi-logo.png" alt="Blogemi Logo" width={70} height={70} />
+        <Image src="/blogemi-logo.png" alt="Blogemi Logo" width={70} height={70} priority={true} />
       </Link>
       <ul className={styles.linkContainer}>
         <li>
