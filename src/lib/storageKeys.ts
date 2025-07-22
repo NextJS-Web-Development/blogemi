@@ -1,3 +1,4 @@
 export const LOCAL_STORAGE_KEYS = {
-  THEME: 'theme'
+  COOKIE_CONSENT: 'cookieConsent',
+  THEME: 'theme',
 }

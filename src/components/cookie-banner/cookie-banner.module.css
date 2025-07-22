@@ -1,0 +1,68 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  font-size: 20px;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f3f3f3;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  max-width: 90%;
+  animation: bannerPopup 0.5s ease-in-out;
+}
+
+.bannerTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.bannerDescription {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.listElement {
+  list-style: none;
+}
+
+.listImage {
+  padding-right: 10px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 5px 10px;
+}
+
+.buttonContainer button {
+  font-size: 23px;
+}
+
+@keyframes bannerPopup {
+  from {
+    transform: scale(0.40);
+  }
+  to {
+    transform: scale(1.0);
+  }
+}

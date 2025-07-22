@@ -3,6 +3,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Geist } from 'next/font/google';
 import { Header } from '@/components';
+import CookieBanner from '@/components/cookie-banner/CookieBanner';
 
 const font = Geist({
   subsets: ['latin'],
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={font.className}>
         <Header />
         {children}
+        <CookieBanner />
       </body>
     </html>
   );
