@@ -23,7 +23,7 @@ export function toggleTheme({
 }
 
 export function turnOnDarkTheme(spanElement: HTMLDivElement, useAnimation: boolean): void {
-  spanElement.innerText = '☾';
+  spanElement.textContent = '☾';
 
   if (useAnimation) {
     spanElement.classList.add(styles.themeDark);
@@ -32,7 +32,7 @@ export function turnOnDarkTheme(spanElement: HTMLDivElement, useAnimation: boole
 }
 
 function turnOnLightTheme(spanElement: HTMLDivElement, useAnimation: boolean): void {
-  spanElement.innerText = '☀︎';
+  spanElement.textContent = '☀︎';
 
   if (useAnimation) {
     spanElement.classList.add(styles.themeLight);
