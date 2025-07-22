@@ -10,7 +10,7 @@ interface CookieCrumbProps {
 export default function CookieCrumb({ content }: CookieCrumbProps): JSX.Element {
   return (
     <li className={styles.listElement}>
-      <Image src="/cookies/cookie-crumb.png" alt="Cookie Crumb" width={12} height={12} className={styles.listImage} />
+      <Image src="/cookiebanner/cookie-crumb.png" alt="Cookie Crumb" width={12} height={12} className={styles.listImage} />
       <span>{content}</span>
     </li>
   );

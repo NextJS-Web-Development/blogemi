@@ -21,7 +21,7 @@ export default function CookieBanner(): JSX.Element {
       <div className={styles.overlay}>
         <div className={styles.banner}>
           <div className={styles.bannerTitle}>
-            <Image src="/cookies/cookies.svg" alt="Picture of Cookies" width={106} height={80} />
+            <Image src="/cookiebanner/cookies.svg" alt="Picture of Cookies" width={106} height={80} />
             <h1>COOKIES</h1>
           </div>
 
