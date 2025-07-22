@@ -1,6 +1,7 @@
 import { JSX, useEffect, useRef, useState } from 'react';
 import styles from '@/components/header/components/user-menu/user-menu.module.css';
-import { toggleTheme, turnOnDarkTheme } from '@/components/header/utils';
+import { toggleTheme, turnOnDarkTheme, turnOnLightTheme } from '@/components/header/utils';
+import { LOCAL_STORAGE_KEYS } from '@/lib/storageKeys';
 
 export default function ThemeToggle(): JSX.Element {
   const [isThemeDark, setIsThemeDark] = useState(false);
@@ -15,7 +16,18 @@ export default function ThemeToggle(): JSX.Element {
   };
 
   useEffect(() => {
-    if (toggleThemeSpanRef.current) turnOnDarkTheme(toggleThemeSpanRef.current, false);
+    if (!toggleThemeSpanRef.current) return;
+
+    const savedTheme = localStorage.getItem(LOCAL_STORAGE_KEYS.THEME);
+    const isDarkTheme = savedTheme === 'dark';
+
+    setIsThemeDark(isDarkTheme);
+
+    if (isDarkTheme) {
+      turnOnDarkTheme(toggleThemeSpanRef.current, false);
+    } else {
+      turnOnLightTheme(toggleThemeSpanRef.current, false);
+    }
   }, []);
 
   return (

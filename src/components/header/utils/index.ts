@@ -1,4 +1,5 @@
 export {
   toggleTheme,
-  turnOnDarkTheme
+  turnOnDarkTheme,
+  turnOnLightTheme
 } from './theme';

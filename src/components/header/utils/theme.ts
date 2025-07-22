@@ -1,5 +1,6 @@
 import styles from '@/components/header/components/user-menu/user-menu.module.css';
 import { Dispatch, RefObject, SetStateAction } from "react";
+import { LOCAL_STORAGE_KEYS } from '@/lib/storageKeys';
 
 interface ThemeProps {
   isThemeDark: boolean;
@@ -13,13 +14,18 @@ export function toggleTheme({
   toggleThemeSpanRef
 }: ThemeProps): void {
   if (!toggleThemeSpanRef.current) return;
-  setIsThemeDark(!isThemeDark);
 
   const spanElement = toggleThemeSpanRef.current;
-  if (isThemeDark)
+  const newIsThemeDark = !isThemeDark;
+  setIsThemeDark(newIsThemeDark);
+
+  if (newIsThemeDark) {
     turnOnDarkTheme(spanElement, true);
-  else
+    localStorage.setItem(LOCAL_STORAGE_KEYS.THEME, 'dark');
+  } else {
     turnOnLightTheme(spanElement, true);
+    localStorage.setItem(LOCAL_STORAGE_KEYS.THEME, 'light');
+  }
 }
 
 export function turnOnDarkTheme(spanElement: HTMLDivElement, useAnimation: boolean): void {
@@ -31,7 +37,7 @@ export function turnOnDarkTheme(spanElement: HTMLDivElement, useAnimation: boole
   }
 }
 
-function turnOnLightTheme(spanElement: HTMLDivElement, useAnimation: boolean): void {
+export function turnOnLightTheme(spanElement: HTMLDivElement, useAnimation: boolean): void {
   spanElement.textContent = '☀︎';
 
   if (useAnimation) {
