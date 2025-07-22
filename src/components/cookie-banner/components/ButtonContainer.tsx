@@ -1,10 +1,9 @@
 'use client';
 
 import styles from '@/components/cookie-banner/cookie-banner.module.css';
+import LOCAL_STORAGE from '@/lib/localStorage';
 
 import { Dispatch, JSX, SetStateAction } from 'react';
-import { LOCAL_STORAGE } from '@/lib/localStorage';
-
 interface ButtonContainerProps {
   setShowBanner: Dispatch<SetStateAction<boolean>>;
 }

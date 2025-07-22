@@ -1,8 +1,8 @@
 import styles from '@/components/header/components/user-menu/user-menu.module.css';
+import LOCAL_STORAGE from '@/lib/localStorage';
 
 import { JSX, useEffect, useRef, useState } from 'react';
 import { toggleTheme, turnOnDarkTheme, turnOnLightTheme } from '@/components/header/utils';
-import { LOCAL_STORAGE } from '@/lib/localStorage';
 
 export default function ThemeToggle(): JSX.Element {
   const [isThemeDark, setIsThemeDark] = useState(false);

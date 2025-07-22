@@ -1,7 +1,7 @@
 import styles from '@/components/header/components/user-menu/user-menu.module.css';
+import LOCAL_STORAGE from '@/lib/localStorage';
 
 import { Dispatch, RefObject, SetStateAction } from "react";
-import { LOCAL_STORAGE } from '@/lib/localStorage';
 
 interface ThemeProps {
   isThemeDark: boolean;

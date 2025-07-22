@@ -4,8 +4,8 @@ import styles from '@/components/cookie-banner/cookie-banner.module.css';
 import Image from 'next/image';
 import CookieCrumb from '@/components/cookie-banner/components/CookieCrumb';
 import ButtonContainer from '@/components/cookie-banner/components/ButtonContainer';
+import LOCAL_STORAGE from '@/lib/localStorage';
 
-import { LOCAL_STORAGE } from '@/lib/localStorage';
 import { JSX, useEffect, useState } from 'react';
 
 export default function CookieBanner(): JSX.Element {

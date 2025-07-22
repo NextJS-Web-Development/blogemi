@@ -1,4 +1,4 @@
-export const LOCAL_STORAGE = {
+const LOCAL_STORAGE = {
   COOKIE_CONSENT: {
     KEY: 'cookieConsent',
     VALUES: {
@@ -14,3 +14,5 @@ export const LOCAL_STORAGE = {
     }
   },
 }
+
+export default LOCAL_STORAGE
