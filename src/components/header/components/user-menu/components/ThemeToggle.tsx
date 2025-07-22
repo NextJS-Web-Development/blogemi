@@ -1,5 +1,5 @@
 import { JSX, useEffect, useRef, useState } from 'react';
-import styles from '@/components/header/components/user-menu/user-menu.module.css'
+import styles from '@/components/header/components/user-menu/user-menu.module.css';
 import { toggleTheme, turnOnDarkTheme } from '@/components/header/utils';
 
 export default function ThemeToggle(): JSX.Element {

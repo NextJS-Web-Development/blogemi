@@ -1,9 +1,8 @@
-import styles from "./header.module.css";
+import styles from './header.module.css';
 
-import { JSX } from "react";
-import Navigation from './components/navigation/Navigation';
-import UserMenu from './components/user-menu/UserMenu';
-import Head from "next/head";
+import { JSX } from 'react';
+import { Navigation, UserMenu } from '@/components/header/components/index';
+import Head from 'next/head';
 
 export default function Header(): JSX.Element {
   return (
