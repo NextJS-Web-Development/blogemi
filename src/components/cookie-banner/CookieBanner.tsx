@@ -5,14 +5,14 @@ import Image from 'next/image';
 import CookieCrumb from '@/components/cookie-banner/components/CookieCrumb';
 import ButtonContainer from '@/components/cookie-banner/components/ButtonContainer';
 
-import { LOCAL_STORAGE_KEYS } from '@/lib/storageKeys';
+import { LOCAL_STORAGE } from '@/lib/localStorage';
 import { JSX, useEffect, useState } from 'react';
 
 export default function CookieBanner(): JSX.Element {
   const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
-    const cookieConsent = localStorage.getItem(LOCAL_STORAGE_KEYS.COOKIE_CONSENT);
+    const cookieConsent = localStorage.getItem(LOCAL_STORAGE.COOKIE_CONSENT.KEY);
     if (!cookieConsent) setShowBanner(true);
   }, []);
 

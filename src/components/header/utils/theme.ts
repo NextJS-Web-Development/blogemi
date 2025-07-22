@@ -1,6 +1,6 @@
 import styles from '@/components/header/components/user-menu/user-menu.module.css';
 import { Dispatch, RefObject, SetStateAction } from "react";
-import { LOCAL_STORAGE_KEYS } from '@/lib/storageKeys';
+import { LOCAL_STORAGE } from '@/lib/localStorage';
 
 interface ThemeProps {
   isThemeDark: boolean;
@@ -21,10 +21,10 @@ export function toggleTheme({
 
   if (newIsThemeDark) {
     turnOnDarkTheme(spanElement, true);
-    localStorage.setItem(LOCAL_STORAGE_KEYS.THEME, 'dark');
+    localStorage.setItem(LOCAL_STORAGE.THEME.KEY, LOCAL_STORAGE.THEME.VALUES.DARK);
   } else {
     turnOnLightTheme(spanElement, true);
-    localStorage.setItem(LOCAL_STORAGE_KEYS.THEME, 'light');
+    localStorage.setItem(LOCAL_STORAGE.THEME.KEY, LOCAL_STORAGE.THEME.VALUES.LIGHT);
   }
 }
 
